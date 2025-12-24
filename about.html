@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('portfiloo web image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    /* Left-side navigation */
+    nav {
+      width: 220px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+      padding-top: 50px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 15px 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #00ffea;
+      color: #000;
+    }
+
+    /* Main content */
+    .main {
+      margin-left: 220px;
+      padding: 50px 30px;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: flex-start;
+      /* image left */
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .about-image {
+      flex: 0 0 350px;
+      /* fixed width for image */
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0;
+      /* no frame */
+      box-shadow: none;
+      /* remove shadow */
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-text h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #00ffea;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .about-text p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #00ffea;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin-top: 50px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .about-container {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .about-image {
+        flex: none;
+        width: 250px;
+        margin-bottom: 20px;
+      }
+
+      .about-text h1 {
+        font-size: 2.5em;
+      }
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0;
+      /* no frame */
+      box-shadow: none;
+      /* remove shadow */
+      /* Animation */
+      position: relative;
+      animation: moveRight 4s ease-in-out infinite alternate;
+    }
+
+    /* Keyframes for left to right movement */
+    @keyframes moveRight {
+      0% {
+        left: 0;
+      }
+
+      50% {
+        left: 20px;
+      }
+
+      /* move 20px to the right */
+      100% {
+        left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="project.html">Projects</a>
+    <a href="index.html">Contact</a>
+  </nav>
+
+  <div class="main">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="222222222.png" alt="My Picture">
+      </div>
+      <div class="about-text">
+        <h1>About Me</h1>
+        <p>Hello! I'm <span class="highlight">Arman Nawaz </span>, a passionate <span class="highlight">Web
+            Designer</span> and <span class="highlight">Social Media Expert</span>. I love combining creativity with
+          technology to build amazing digital experiences.</p>
+        <p>I create <span class="highlight">SEO-based content ideas</span>, manage <span class="highlight">YouTube
+            channels</span>, design <span class="highlight">social media posters</span>, and run <span
+            class="highlight">Facebook pages</span>. My goal is to help brands grow online with engaging content and
+          stunning visuals.</p>
+        <p>I am always learning new skills, exploring trends, and finding innovative ways to make digital content more
+          impactful and memorable.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 My Portfolio — All Rights Reserved
+  </footer>
+
+</body>
+
+</html>

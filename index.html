@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      width: 100%;
+      padding: 20px 0;
+      background: #09415571;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+      gap: 15px;
+      border-radius: 2ch;
+      
+    }
+
+    nav a {
+      color: #e8eee8;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 14px;
+      transition: 0.1s;
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    nav a:hover {
+      color: #0f1011;
+      background-color: rgb(241, 233, 12);
+      border-radius: 9px;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 20px;
+      height: 60vh;
+      background-image: url("portfiloo web image.jpg");
+      background-size: cover;
+      background-position: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero-left h1 {
+      font-size: 50px;
+      font-weight: bold;
+      color: rgb(185, 210, 230);
+    }
+
+    .hero-right img {
+      height: 600px;
+      object-fit: cover;
+      border-radius: 80px;
+      padding-left: 9cm;
+      padding-bottom: 1cm;
+      position: relative;
+      animation: slideRight 10s linear infinite alternate;
+    }
+
+    @keyframes slideRight {
+      0% { left: 0; }
+      100% { left: 50px; }
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      color: #80ceeb;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      border-left: 5px solid #922121;
+      padding-left: 10px;
+      border-radius: 20px;
+    }
+
+    .contact {
+      background-color: #020c1d2e;
+      color: #0ae6ee;
+      border-radius: 15px;
+      padding: 30px;
+    }
+
+    .contact input, .contact textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      background: #191818;
+      color: rgb(238, 236, 236);
+    }
+
+    .contact button {
+      padding: 12px 20px;
+      background: #ffffff;
+      color: #111111;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact button:hover { background: #f3ef06; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      margin-top: 40px;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+
+  body{
+    padding-top:70px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    padding:40px 10px;
+    min-height:60vh;
+  }
+
+  .hero-left h1{
+    font-size:24px;
+    max-width:65%;
+  }
+
+  .hero-right img{
+    width:200px;
+    position:absolute;
+    right:10px;
+    bottom:30px;
+  }
+}
+
+  </style>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="project.html">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <h1>
+        <span id="typed-text"></span><span class="cursor">|</span>
+      </h1>
+    </div>
+
+    <div class="hero-right">
+      <img src="my own pic.png" alt="My Picture">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <h2>Contact Me</h2>
+
+    <form action="https://formspree.io/f/xgvqyeon" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Enter your Own Email" required>
+
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 My Portfolio — All Rights Reserved
+  </footer>
+
+  <script>
+    const texts = [
+      "Hello, I'm ..Arman..",
+      "I am a Web Designer",
+      "I am a Social Media Expert",
+      "I create AI Images & Videos",
+      "I am a Content Creator",
+      "I am a FullStack Web Devoloper",
+      "PhotoShop export"
+    ];
+
+    let currentText = 0;
+    let charIndex = 0;
+    const typedText = document.getElementById("typed-text");
+
+    function type() {
+      if (charIndex < texts[currentText].length) {
+        typedText.textContent += texts[currentText].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 90);
+      } else {
+        setTimeout(deleteText, 1500);
+      }
+    }
+
+    function deleteText() {
+      if (charIndex > 0) {
+        typedText.textContent = texts[currentText].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(deleteText, 50);
+      } else {
+        currentText = (currentText + 1) % texts.length;
+        setTimeout(type, 90);
+      }
+    }
+
+    type();
+  </script>
+
+</body>
+</html>

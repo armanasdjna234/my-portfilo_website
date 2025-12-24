@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('project background pic.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    /* Navigation */
+    nav {
+      width: 220px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      flex-direction: column;
+      padding-top: 50px;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 15px 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #00ffea;
+      color: #000;
+      border-radius: 10px;
+    }
+
+    /* Main Content */
+    .main {
+      margin-left: 220px;
+      padding: 50px 30px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 50px;
+      color: #00ffea;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    /* Project Card */
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 255, 234, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(0, 255, 234, 0.7);
+    }
+
+    .project-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 200px;
+    }
+
+    .project-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .project-info h3 {
+      color: #00ffea;
+      margin-bottom: 10px;
+    }
+
+    .project-info p {
+      color: #fff;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .project-info a {
+      text-decoration: none;
+      color: #000;
+      background-color: #00ffea;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .project-info a:hover {
+      background-color: #d9f104;
+      color: #000000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin-top: 50px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="project.html" class="active">Projects</a>
+    <a href="index.html">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>My Projects</h1>
+
+    <div class="projects-grid">
+
+      <!-- 1. Car Showroom Website -->
+      <div class="project-card">
+        <img src="car web [ic.png" alt="Portfolio Website">
+        <div class="project-info">
+          <h3>Website Developer | Car Showroom</h3>
+          <p>Dark theme Car Showroom built using HTML, CSS, JS.</p>
+          <p>Best Performance Developer</p>
+          <br>
+          <a href="https://1111996-stack.github.io/car_website/">View Live</a>
+        </div>
+      </div>
+
+      <!-- 2. YouTube Project -->
+      <div class="project-card">
+        <img src="chanal.jpeg" alt="YouTube Content Setup">
+        <div class="project-info">
+          <h3>YouTube Content Setup</h3>
+          <p>SEO Titles, Thumbnails & Viral Strategy.</p>
+          <p>Channel Growth Expert</p>
+          <br>
+          <a href="https://www.youtube.com/@Easy_channel971">View Details</a>
+        </div>
+      </div>
+
+      <!-- 3. Poster Designing -->
+      <div class="project-card">
+        <img src="poster.png" alt="Poster Designing">
+        <div class="project-info">
+          <h3>Poster Designing</h3>
+          <p>Creative Poster Designing for brands.</p>
+          <a href="#">View Details</a>
+        </div>
+      </div>
+
+      <!-- 4. AI Content Creation -->
+      <div class="project-card">
+        <img src="content.png" alt="AI Content Creation">
+        <div class="project-info">
+          <h3>AI Content Creation Expert</h3>
+          <p>Master in generating AI images, talking-avatar videos, viral scripts, social media captions, thumbnails,
+            and complete content workflow using top AI tools.</p>
+          <br>
+          <a href="https://www.youtube.com/@Easy_channel971">View Details</a>
+        </div>
+      </div>
+
+      <!-- 5. AI Images Creation Master -->
+      <div class="project-card">
+        <img src="Phoenix_09_A_closeup_portraitstyle_moment_Jesus_face_determine_1.jpg" alt="AI Images Creation Master">
+        <div class="project-info">
+          <h3>AI Images Creation Master</h3>
+          <p>High-Quality AI Art & Creative Visuals.</p>
+          <p>Professional AI Image Creation</p>
+          <p>AI Video Creator</p>
+          <br>
+          <a href="all_ai_images.html">See Images</a>
+        </div>
+      </div>
+
+      <!-- 6. Portfolio Website -->
+      <div class="project-card">
+        <img src="my portfilooooooooooo.png" alt="Portfolio Website">
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>Modern & responsive personal portfolio website built with HTML, CSS, and JS.</p>
+          <p>Showcases my skills, projects, and AI content creations.</p>
+          <br>
+          <a href="portfolio.html">View Code & Demo</a>
+        </div>
+      </div>
+
+      <!-- 7. uknow -->
+      <div class="project-card">
+        <img src="////////////" alt="new project">
+        <div class="project-info">
+          <h3>uknow</h3>
+          <p>ukno project</p>
+          <p>uknow project.</p>
+          <br>
+          <a href="uknow peoject">View Code & Demo</a>
+        </div>
+      </div>
+
+      <!-- 7. uknow -->
+      <div class="project-card">
+        <img src="////////////" alt="new project">
+        <div class="project-info">
+          <h3>uknow</h3>
+          <p>ukno project</p>
+          <p>uknow project.</p>
+          <br>
+          <a href="uknow peoject">View Code & Demo</a>
+        </div>
+      </div>
+
+      <!-- 7. uknow -->
+      <div class="project-card">
+        <img src="////////////" alt="new project">
+        <div class="project-info">
+          <h3>uknow</h3>
+          <p>ukno project</p>
+          <p>uknow project.</p>
+          <br>
+          <a href="uknow peoject">View Code & Demo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 My Portfolio — All Rights Reserved
+  </footer>
+
+</body>
+
+</html>
